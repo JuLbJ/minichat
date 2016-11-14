@@ -9,6 +9,7 @@ catch(Exception $e)
 }
 
 // insertion of the message using a prepared query
+
 $req = $bdd->prepare('INSERT INTO minichat (pseudo, message) VALUES(?, ?)');
 $req->execute(array($_POST['pseudo'], $_POST['message']));
 
